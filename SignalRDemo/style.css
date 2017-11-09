@@ -1,0 +1,48 @@
+﻿h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size:50px;
+    margin-bottom: 50px;
+}
+h4 {
+    font-size: 40px;
+}
+#discussion {
+    //padding: 10px 10px 10px 10px;
+    //margin: 30px 30px 30px 30px;
+    //margin-right: 1px;
+    //width: 300px;
+    height: 100px;
+    border-style: solid;
+    background-color: aliceblue;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#user {
+    //width: 300px;
+    height: 100px;
+    border-style: solid;
+    background-color: aliceblue;
+    //padding: 10px 10px 10px 10px;
+    //margin: 30px 30px 30px 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#text {
+    width: 757px;
+}
+#buttonLogOut {
+    //height: 20px;
+    float: left;
+    padding-left: -10px;
+}
+#online {
+   text-align:center;
+}
+.container{
+    margin-top: 30px;
+}
+.row {
+    margin-top: 30px;
+}
