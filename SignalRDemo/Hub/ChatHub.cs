@@ -5,7 +5,7 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 
 /*
- *  This Class list all Server Side Methods that the hub proxy can be invoked with 
+ *  This Class list all Server Side Methods that the hub proxy can invoked.
  *  
  */
 namespace SignalRDemo
@@ -22,8 +22,9 @@ namespace SignalRDemo
             else
             {
                 Clients.Caller.enter("you", message);
-                Clients.Others.enter(name, message);
                 Clients.Caller.setColor("blue");
+
+                Clients.Others.enter(name, message);
                 Clients.Others.setColor("red");
 
             }
