@@ -1,34 +1,34 @@
-﻿
-// get: var storedNames = JSON.parse(localStorage.getItem("onlineUsers"));
-
-var name = "";
+﻿//var name = "";
 angular.module('chat', ['SignalR', 'ngRoute'])
-    .controller('Login', ['signalRService', '$rootScope', function (signalRService, $rootScope) {
-        that = this;
+    // Handles the events where users log in and log out
+    .controller('Login', ['signalRService', '$rootScope', function (signalRService, $rootScope) { 
         this.loggedIn = false;
         this.rootScope = $rootScope;
-        this.name;
-
+        this.rootScope.name = "";
+        this.signalRService = signalRService;
+        var that = this;
         this.logIn = function () {
             var element = document.getElementById('name');
-            name = element.value;
-            that.name = name;
-            signalRService.goOnline(name);
-            this.loggedIn = true;
+            var name = element.value; 
+            signalRService.goOnline(name); // allows all clients to see you went online
+            signalRService.broadcastMessage("server", "*" + name + " has entered the room*")
+            that.rootScope.name = name;
+            that.loggedIn = true;
             element.value = "";
         };
         this.logOut = function () {
             that.loggedIn = false;
-            signalRService.goOffline(name);
+            signalRService.goOffline(that.rootScope.name); // allows all clients to see you went offline
+            signalRService.broadcastMessage("server", "*" + that.rootScope.name + " has left the room*");
         }
     }])
-    .controller('EnterMessage', ['signalRService', '$rootScope', function (signalRService, $rootScope) { // need to inject chatService here
+    // Handles the event where user enter a message in the chat room
+    .controller('EnterMessage', ['signalRService', '$rootScope', function (signalRService, $rootScope) { 
         this.message = "";
-        this.rootScope = $rootScope;
-
+        
         this.enterText = function () {
             var text = document.getElementById('text');            
-            signalRService.broadcastMessage(that.name, text.value);
+            signalRService.broadcastMessage($rootScope.name, text.value); // broadcast that message to all other Clients
             text.value = ""; 
         };
     }]);

@@ -7,30 +7,23 @@ h4 {
     font-size: 40px;
 }
 #discussion {
-    //padding: 10px 10px 10px 10px;
-    //margin: 30px 30px 30px 30px;
-    //margin-right: 1px;
-    //width: 300px;
     height: 100px;
     border-style: solid;
-    background-color: aliceblue;
+    background-color: whitesmoke;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
 #user {
-    //width: 300px;
     height: 100px;
     border-style: solid;
-    background-color: aliceblue;
-    //padding: 10px 10px 10px 10px;
-    //margin: 30px 30px 30px 30px;
+    background-color: whitesmoke;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 
 #text {
-    width: 757px;
+    width: 70%;
 }
 #buttonLogOut {
     //height: 20px;

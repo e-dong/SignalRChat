@@ -18,3 +18,23 @@ C:\Users\eric2\Box Sync\Pitt\Senior\CS1900\SignalRDemo\SignalRDemo\bin\Microsoft
 C:\Users\eric2\Box Sync\Pitt\Senior\CS1900\SignalRDemo\SignalRDemo\bin\Microsoft.Owin.Security.xml
 C:\Users\eric2\Box Sync\Pitt\Senior\CS1900\SignalRDemo\SignalRDemo\bin\Newtonsoft.Json.xml
 C:\Users\eric2\Box Sync\Pitt\Senior\CS1900\SignalRDemo\SignalRDemo\obj\Debug\SignalRDemo.csprojResolveAssemblyReference.cache
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\SignalRDemo.dll.config
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\SignalRDemo.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\SignalRDemo.pdb
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.Security.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Newtonsoft.Json.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Owin.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Microsoft.Owin.Security.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\bin\Newtonsoft.Json.xml
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\obj\Debug\SignalRDemo.csprojResolveAssemblyReference.cache
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\obj\Debug\SignalRDemo.csproj.CoreCompileInputs.cache
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\obj\Debug\SignalRDemo.dll
+C:\Users\eric2\Desktop\SignalRChat\SignalRDemo\obj\Debug\SignalRDemo.pdb
