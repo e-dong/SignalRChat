@@ -10,11 +10,13 @@ angular.module('chat', ['SignalR', 'ngRoute'])
         this.logIn = function () {
             var element = document.getElementById('name');
             var name = element.value; 
-            signalRService.goOnline(name); // allows all clients to see you went online
-            signalRService.broadcastMessage("server", "*" + name + " has entered the room*")
-            that.rootScope.name = name;
-            that.loggedIn = true;
-            element.value = "";
+            if (name != "") {
+                signalRService.goOnline(name); // allows all clients to see you went online
+                signalRService.broadcastMessage("server", "*" + name + " has entered the room*");
+                that.rootScope.name = name;
+                that.loggedIn = true;
+                element.value = "";
+            }
         };
         this.logOut = function () {
             that.loggedIn = false;
@@ -27,8 +29,11 @@ angular.module('chat', ['SignalR', 'ngRoute'])
         this.message = "";
         
         this.enterText = function () {
-            var text = document.getElementById('text');            
-            signalRService.broadcastMessage($rootScope.name, text.value); // broadcast that message to all other Clients
-            text.value = ""; 
+            var text = document.getElementById('text');
+            // only broadcast if text is not empty
+            if (text.value != "") {
+                signalRService.broadcastMessage($rootScope.name, text.value); // broadcast that message to all other Clients
+                text.value = "";
+            }
         };
     }]);

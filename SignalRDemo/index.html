@@ -21,40 +21,49 @@
     
         <title>My SignalR Demo</title>
     </head>
-    <body >
-        <div class="container" ng-controller="Login as login"> 
+    <body ng-controller="Login as login">
+        <div id="logOut" ng-show="login.loggedIn" ng-click="login.logOut()">
+            <button id="buttonLogOut" class="btn btn-danger">Log Out</button>
+        </div>
+        <div class="container" >
             <div class="text-center">
                 <h1>Chatroom SignalR Demo</h1>
             </div>
+
             <div class="row">
                 <!-- Logging Out -->
-                <div class="col-md-5 align-self-start" id="logOut" ng-show="login.loggedIn" ng-click="login.logOut()">
-                    <button id="buttonLogOut"class="btn btn-danger">Log Out</button>
-                </div>
-                <div class="col-md-5" ng-show="login.loggedIn"><h4>Welcome, {{login.rootScope.name}}</h4></div>
+                <!--<div class="col-md-5 align-self-start">
+
+                </div> -->
+                <div class="col-md-10" ng-show="login.loggedIn"><h4>Welcome, {{login.rootScope.name}}</h4></div>
                 <div class="col-md-2 align-self-end" ng-show="login.loggedIn"><h4 id="online">Online</h4></div>
                 <!-- Login User-->
                 <div class="col" ng-show="!login.loggedIn">
                     <form>
                         <p>Name</p>
                         <input id="name" type="text" label="Name" />
-                        <input type="submit" value="Log In" ng-click="login.logIn()"/>
+                        <input type="submit" value="Log In" ng-click="login.logIn()" />
                     </form>
-                </div> 
+                </div>
             </div>
-            <div class="row" >
+            <div class="row">
                 <!-- Chat Room Messages will be appended here -->
                 <div class="col-lg-9" id="discussion" ng-show="login.loggedIn"></div>
                 <div class="col-lg-1"></div>
                 <!-- Displays All Logged in users -->
-                <div id="user" ng-show="login.loggedIn"></div> 
+                <div id="user" ng-show="login.loggedIn"></div>
                 <!-- Users Enter Messages here -->
-                <div class="col" id="form" ng-controller="EnterMessage as message" ng-show="login.loggedIn">
-                    <form>
+
+            </div>
+            <div class="row" id="form" ng-controller="EnterMessage as message" ng-show="login.loggedIn">
+                <form>
+                    <div class="col-lg-8 chat" id="text-div">
                         <input id="text" type="text" autocomplete="off" />
-                        <input class="btn btn-primary" ng-click="message.enterText()" type="submit" value="send" />
-                    </form>
-                </div>
+                    </div>
+                    <div class="col-lg-1 chat" id="send-div">
+                        <input id="send" class="btn btn-primary" ng-click="message.enterText()" type="submit" value="send" />
+                    </div>
+                </form>
             </div>
         </div>
     </body>
