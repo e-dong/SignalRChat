@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ng-app="chat">
+    <head> 
+        <meta charset="utf-8" />
+        <!-- CSS -->
+        <link href="Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+        <!-- Necessary for AngularJS -->
+        <script src="LibraryScripts/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <!-- Necessary for SignalR -->
+        <script src="LibraryScripts/jquery-3.1.1.js"></script>
+        <script src="LibraryScripts/jquery.signalR-2.2.1.min.js"></script> 
+        <script src="LibraryScripts/angular-signalr-hub.min.js"></script>
+        <!-- Scripts for AngularJS App -->
+        <script src="app.js"></script>
+        <script src="angularjs-services/signalr-service.js"></script>
+    
+        <title>My SignalR Demo</title>
+    </head>
+    <body >
+        <div class="container" ng-controller="Login as login"> 
+            <div class="text-center">
+                <h1>CS 1900 | SignalR Demo</h1>
+            </div>
+            <div class="row">
+                <!-- Logging Out -->
+                <div class="col-md-5 align-self-start" id="logOut" ng-show="login.loggedIn" ng-click="login.logOut()">
+                    <button id="buttonLogOut"class="btn btn-danger">Log Out</button>
+                </div>
+                <div class="col-md-5" ng-show="login.loggedIn"><h4>Welcome, {{login.rootScope.name}}</h4></div>
+                <div class="col-md-2 align-self-end" ng-show="login.loggedIn"><h4 id="online">Online</h4></div>
+                <!-- Login User-->
+                <div class="col" ng-show="!login.loggedIn">
+                    <form>
+                        <p>Name</p>
+                        <input id="name" type="text" label="Name" />
+                        <input type="submit" value="Log In" ng-click="login.logIn()"/>
+                    </form>
+                </div> 
+            </div>
+            <div class="row" >
+                <!-- Chat Room Messages will be appended here -->
+                <div class="col-lg-9" id="discussion" ng-show="login.loggedIn"></div>
+                <div class="col-lg-1"></div>
+                <!-- Displays All Logged in users -->
+                <div id="user" ng-show="login.loggedIn"></div> 
+                <!-- Users Enter Messages here -->
+                <div class="col" id="form" ng-controller="EnterMessage as message" ng-show="login.loggedIn">
+                    <form>
+                        <input id="text" type="text" autocomplete="off" />
+                        <input class="btn btn-primary" ng-click="message.enterText()" type="submit" value="send" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
