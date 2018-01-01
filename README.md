@@ -1,8 +1,6 @@
 # SignalRChat
 Simple AngularJS that uses SignalR to implement a Chatroom on localhost  
 
-*** Now Deployed on Azure ***  
-Site: http://signalrchatroom-demo.azurewebsites.net
 ## Viewing Source Code  
 * SignalRDemo/index.html: html page of application  
 * SignalRDemo/app.js: contains AngularJS controllers and main logic  
