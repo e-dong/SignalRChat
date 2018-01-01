@@ -10,3 +10,5 @@ Simple AngularJS that uses SignalR to implement a Chatroom on localhost
 1. use signalr wrapper  
    link: https://github.com/JustMaier/angular-signalr-hub  
 1. Add Entity Framework/ Database Functionality  
+## Screenshot  
+![alt text](screenshot.png "chat_screenshot")  
